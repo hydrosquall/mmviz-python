@@ -1,0 +1,12 @@
+# Author: Michael Bessey <mbessey@massmutual.com>
+# MassMutual Financial Group, http://datascience.massmutual.com
+
+lines.linewidth: 1
+
+# ColorBrewer scheme 12-class Paired
+axes.prop_cycle: cycler('color', ["a6cee3", "1f78b4", "b2df8a", "33a02c", "fb9a99", "e31a1c", "fdbf6f", "ff7f00", "cab2d6", "6a3d9a", "ffff99", "b15928"])
+
+xtick.major.size: 0
+xtick.minor.size: 0
+ytick.major.size: 0
+ytick.minor.size: 0
