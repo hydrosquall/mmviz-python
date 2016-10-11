@@ -14,6 +14,7 @@ python install.py
 
 ## Utility [mmviz_utils.py]
 * create_bin_list(values, binwidth)
+* place_legend(plt, title, width = 0.2)
 
 
 
