@@ -1,12 +1,63 @@
 # Author: Michael Bessey <mbessey@massmutual.com>
 # MassMutual Financial Group, http://datascience.massmutual.com
 
-lines.linewidth: 1
+### LINES
+lines.linewidth : 1
+lines.linestyle : -
 
-# ColorBrewer scheme 12-class Paired
-axes.prop_cycle: cycler('color', ["a6cee3", "1f78b4", "b2df8a", "33a02c", "fb9a99", "e31a1c", "fdbf6f", "ff7f00", "cab2d6", "6a3d9a", "ffff99", "b15928"])
+# ColorBrewer scheme 9-class Set1
+#lines.color : cycler("color", ["e41a1c", "377eb8", "4daf4a", "984ea3", "ff7f00", "ffff33", "a65628", "f781bf", "999999"])
 
-xtick.major.size: 0
-xtick.minor.size: 0
-ytick.major.size: 0
-ytick.minor.size: 0
+### PATCHES
+patch.edgecolor : ffffff
+
+### FONT
+font.serif : Times, serif
+font.sans-serif : Arial Narrow, sans-serif
+
+
+### AXES
+
+# ColorBrewer scheme 12-class Set3
+axes.prop_cycle : cycler("color", ["8dd3c7", "ffffb3", "bebada", "fb8072", "80b1d3", "fdb462", "b3de69", "fccde5", "d9d9d9", "bc80bd", "ccebc5", "ffed6f"])
+axes.facecolor : ffffff
+axes.edgecolor : ffffff
+axes.axisbelow : True
+axes.grid : True
+
+axes.titlesize : x-large
+
+
+### TICKS
+
+xtick.major.size : 0
+xtick.minor.size : 0
+ytick.major.size : 0
+ytick.minor.size : 0
+
+
+### GRIDS
+
+grid.linestyle : -
+grid.linewidth : 1.0
+grid.color : e5e5e5
+
+
+### Legend
+legend.loc : best
+legend.fontsize : small
+
+### FIGURE
+
+figure.subplot.left : 0.15
+figure.subplot.right : 0.9
+figure.subplot.bottom : 0.15
+figure.subplot.top : 0.9
+figure.facecolor : ffffff
+#figure.autolayout : True
+
+
+### SAVING FIGURES
+
+savefig.edgecolor : ffffff
+savefig.facecolor : ffffff
