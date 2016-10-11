@@ -9,6 +9,9 @@ matplotlib.style.use("mmviz")
 df = pd.read_csv("../data/diamonds.csv")
 df["price"].plot.box()
 
-plt.title("Distribtion of Price")
+plt.xlabel("")
 plt.ylabel("Price")
+plt.title("Distribtion of Price")
+
+plt.savefig("./images/box")
 plt.show()
