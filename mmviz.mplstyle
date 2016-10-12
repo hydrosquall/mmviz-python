@@ -6,14 +6,15 @@ lines.linewidth : 1
 lines.linestyle : -
 
 # ColorBrewer scheme 9-class Set1
-#lines.color : cycler("color", ["e41a1c", "377eb8", "4daf4a", "984ea3", "ff7f00", "ffff33", "a65628", "f781bf", "999999"])
+# lines.color : cycler("color", ["e41a1c", "377eb8", "4daf4a", "984ea3", "ff7f00", "ffff33", "a65628", "f781bf", "999999"])
 
 ### PATCHES
 patch.edgecolor : ffffff
 
 ### FONT
-font.serif : Times, serif
-font.sans-serif : Arial Narrow, sans-serif
+font.family : sans-serif
+font.serif : Times, Times New Roman, serif
+font.sans-serif : Univers 47 Condensed Light, Univers 57 Condensed, Arial Narrow, Arial, sans-serif
 
 
 ### AXES
@@ -24,8 +25,7 @@ axes.facecolor : ffffff
 axes.edgecolor : ffffff
 axes.axisbelow : True
 axes.grid : True
-
-axes.titlesize : x-large
+axes.titlesize : xx-large
 
 
 ### TICKS

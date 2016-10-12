@@ -4,16 +4,18 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 
-matplotlib.style.use("mmviz")
+import mmviz
+
+mmviz.theme_mm("box")
 
 df = pd.read_csv("../data/diamonds.csv")
-#print(df.head())
 
-df[['cut','price']].boxplot(by="cut", column = "price")
+ax = df[['cut','price']].boxplot(by="cut", column = "price")
+ax.set_title("Distribtion of Price by Cut", fontproperties=mmviz.TITLE_FONT_PROPERTIES)
 
 plt.xlabel("Cut")
 plt.ylabel("Price")
-plt.title("Distribtion of Price by Cut")
 
-plt.savefig("./images/box_1")
+plt.savefig("./images/box_1", dpi=100)
+
 plt.show()

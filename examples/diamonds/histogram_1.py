@@ -4,24 +4,24 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 
-import mmviz_utils
+import mmviz
 
-matplotlib.style.use("mmviz")
+mmviz.theme_mm("histogram")
 
 df = pd.read_csv("../data/diamonds.csv")
 
 bin_width = 500
-bins = mmviz_utils.create_bin_list(df['price'], bin_width)
+bins = mmviz.create_bin_list(df['price'], bin_width)
 
 df = df.pivot(columns='cut', values="price")
-df.plot.hist(stacked=True, bins=bins)
+ax = df.plot.hist(stacked=True, bins=bins)
+ax.set_title("Distribtion of Diamond Price by Cut", fontproperties=mmviz.TITLE_FONT_PROPERTIES)
 
-mmviz_utils.place_legend(plt, "Cut", 0.2)
-
-plt.title("Distribtion of Diamond Price by Cut")
 plt.xlabel("Price (bin width = 500)")
 
-plt.savefig("./images/histogram_1")
+mmviz.place_legend(plt, "Cut", 0.2)
+
+plt.savefig("./images/histogram_1", dpi=100)
 plt.show()
 
 

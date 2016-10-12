@@ -4,6 +4,8 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 
-matplotlib.style.use("mmviz")
+import mmviz
+
+mmviz.theme_mm("histogram")
 
 df = pd.read_csv("../data/diamonds.csv")

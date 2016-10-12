@@ -1,4 +1,13 @@
 import matplotlib
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+
+MMVIZ_BRAND_FONT_SERIF = ["Times", "Times New Roman", "serif"]
+MMVIZ_BRAND_FONT_SANS_SERIF = ["Univers 47 Condensed Light", "Univers 57 Condensed", "Arial Narrow", "Arial", "sans-serif"]
+
+TITLE_FONT_PROPERTIES = FontProperties()
+TITLE_FONT_PROPERTIES.set_family(MMVIZ_BRAND_FONT_SERIF)
+TITLE_FONT_PROPERTIES.set_size("xx-large")
 
 # create bin list based on values list and bin_width
 def create_bin_list(values, bin_width = 30):
@@ -20,6 +29,10 @@ def place_legend(plt, title, width = 0.2) :
 
 
 def theme_mm(chart_type = "default") :
+
+    matplotlib.style.use("mmviz")
+
+    # plt.title("", fontname="Times New Roman")
 
     if chart_type == "bar" :
         matplotlib.rc('lines', linewidth=2, color='r')

@@ -4,21 +4,19 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 
-import mmviz_utils
+import mmviz
 
-matplotlib.style.use("mmviz")
-
-# mmviz_utils.theme_mm("bar")
+mmviz.theme_mm("bar")
 
 df = pd.read_csv("../data/diamonds.csv")
 df1 = df.groupby('clarity').size()
 df1.sort_values(ascending=False, inplace=True)
 
-df1.plot.bar(rot=0)
+ax = df1.plot.bar(rot=0)
+ax.set_title("Diamonds by Clarity", fontproperties=mmviz.TITLE_FONT_PROPERTIES)
 
 plt.xlabel("Clarity")
 plt.ylabel("Frequency")
-plt.title("Diamonds by Clarity")
 
-plt.savefig("./images/bar")
+plt.savefig("./images/bar", dpi=100)
 plt.show()
