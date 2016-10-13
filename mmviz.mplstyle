@@ -20,7 +20,7 @@ font.sans-serif : Univers 47 Condensed Light, Univers 57 Condensed, Arial Narrow
 ### AXES
 
 # ColorBrewer scheme 12-class Set3
-axes.prop_cycle : cycler("color", ["8dd3c7", "ffffb3", "bebada", "fb8072", "80b1d3", "fdb462", "b3de69", "fccde5", "d9d9d9", "bc80bd", "ccebc5", "ffed6f"])
+axes.prop_cycle : cycler("color", ["8da0cb", "fc8d62", "66c2a5", "e5c494", "ffd92f", "b3b3b3", "e78ac3", "a6d854", "7570b3", "d95f02", "1b9e77", "a6761d", "e6ab02", "666666", "e7298a", "66a61e"])
 axes.facecolor : ffffff
 axes.edgecolor : ffffff
 axes.axisbelow : True
