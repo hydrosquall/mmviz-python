@@ -58,7 +58,7 @@ def theme_mm(ax, chart_type = "default") :
 
 
 # Setup scale color based on type
-def scale_color_mm(type = "qual") :
+def scale_color_mm(type = "qual"):
 
     palette = None
 
