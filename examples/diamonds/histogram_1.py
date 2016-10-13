@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 import mmviz
 
-mmviz.theme_mm("histogram")
+matplotlib.style.use("mmviz")
 
 df = pd.read_csv("../data/diamonds.csv")
 
@@ -15,7 +15,8 @@ bins = mmviz.create_bin_list(df['price'], bin_width)
 
 df = df.pivot(columns='cut', values="price")
 ax = df.plot.hist(stacked=True, bins=bins)
-ax.set_title("Distribtion of Diamond Price by Cut", fontproperties=mmviz.TITLE_FONT_PROPERTIES)
+ax.set_title("Distribtion of Diamond Price by Cut")
+mmviz.theme_mm(ax, "histogram")
 
 plt.xlabel("Price (bin width = 500)")
 

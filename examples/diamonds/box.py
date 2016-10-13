@@ -6,11 +6,12 @@ import matplotlib.pyplot as plt
 
 import mmviz
 
-mmviz.theme_mm("box")
+matplotlib.style.use("mmviz")
 
 df = pd.read_csv("../data/diamonds.csv")
 ax = df["price"].plot.box()
-ax.set_title("Distribtion of Price", fontproperties=mmviz.TITLE_FONT_PROPERTIES)
+ax.set_title("Distribtion of Price")
+mmviz.theme_mm(ax, "box")
 
 plt.xlabel("")
 plt.ylabel("Price")

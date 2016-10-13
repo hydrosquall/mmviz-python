@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 
 import mmviz
 
-mmviz.theme_mm("line")
+matplotlib.style.use("mmviz")
+mmviz.scale_color_mm()
 
 # ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
 # ts = np.exp(ts.cumsum())
@@ -15,8 +16,8 @@ mmviz.theme_mm("line")
 df = pd.DataFrame(np.random.randn(1000, 4), index=pd.date_range('1/1/2000', periods=1000), columns=list('ABCD'))
 df = df.cumsum()
 ax = df.plot()
-
-ax.set_title("Random Value Over Time", fontproperties=mmviz.TITLE_FONT_PROPERTIES)
+ax.set_title("Random Value Over Time")
+mmviz.theme_mm(ax, "line")
 
 plt.xlabel("Time")
 plt.ylabel("Value")
