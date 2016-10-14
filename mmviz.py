@@ -40,10 +40,10 @@ def place_legend(plt, title, width = 0.2) :
     plt.legend(title = title, bbox_to_anchor=(1, 0.5), loc='center left', ncol=1)
     plt.subplots_adjust(right= 1 - width)
 
+
 # use MassMutual theme and customize the chart to the given chart_type
 def theme_mm(ax, chart_type = "default") :
 
-    print(ax)
     ax.set_title(ax.get_title(), fontproperties=TITLE_FONT_PROPERTIES)
 
     if chart_type == 'bar' or chart_type == 'bar-vertical' or chart_type == 'column' or chart_type == 'freqpoly' \
@@ -56,44 +56,24 @@ def theme_mm(ax, chart_type = "default") :
 
         ax.yaxis.grid(False)
 
-
 # Setup scale color based on type
-def scale_color_mm(type = "qual"):
+def scale_palette_mm(type = "qual"):
 
-    palette = None
-
-    if type == "qual":
-        palette = get_color_palette("qual1")
-    else:
-        palette = get_color_palette(type)
+    palette = get_palette(type)
 
     if palette != None:
         plt.rc('axes', prop_cycle=(cycler('color', palette)))
 
 
-# Setup scale fill based on type
-def scale_fill_mm(type="qual"):
+def get_palette(type = "qual"):
 
-    palette = None
-
-    if type == "qual":
-        palette = get_color_palette("qual2")
-    else:
-        palette = get_color_palette(type)
-
-    if palette != None:
-        plt.rc('axes', prop_cycle=(cycler('color', palette)))
-
-
-def get_color_palette(type = "qual3"):
-
-    if type == "qual1":
+    if type == "qual_color" or type == "qual_dark":
         return MMVIZ_COLOR_PALETTE_QUAL_1
 
-    if type == "qual2":
+    if type == "qual" or type == "qual_fill" or type == "qual_light":
         return MMVIZ_COLOR_PALETTE_QUAL_2
 
-    if type == "qual3":
+    if type == "qual_all":
         return MMVIZ_COLOR_PALETTE_QUAL_3
 
     if type == "seq":
@@ -103,4 +83,7 @@ def get_color_palette(type = "qual3"):
         return MMVIZ_COLOR_PALETTE_DIV
 
     return None
+
+def get_palette_iter_mm(type = "qual"):
+    return iter(get_palette(type))
 
