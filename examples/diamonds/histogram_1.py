@@ -8,6 +8,8 @@ import mmviz
 
 matplotlib.style.use("mmviz")
 
+mmviz.scale_palette_mm("qual_fill")
+
 df = pd.read_csv("../data/diamonds.csv")
 
 bin_width = 500

@@ -7,11 +7,8 @@ import matplotlib.pyplot as plt
 import mmviz
 
 matplotlib.style.use("mmviz")
-mmviz.scale_color_mm()
 
-# ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
-# ts = np.exp(ts.cumsum())
-# ax = ts.plot(logy=True)
+mmviz.scale_palette_mm("qual_color")
 
 df = pd.DataFrame(np.random.randn(1000, 4), index=pd.date_range('1/1/2000', periods=1000), columns=list('ABCD'))
 df = df.cumsum()
