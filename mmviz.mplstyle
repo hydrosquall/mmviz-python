@@ -50,7 +50,7 @@ legend.fontsize : small
 ### FIGURE
 
 figure.subplot.left : 0.15
-figure.subplot.right : 0.9
+figure.subplot.right : 0.85
 figure.subplot.bottom : 0.15
 figure.subplot.top : 0.9
 figure.facecolor : ffffff
