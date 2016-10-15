@@ -8,9 +8,10 @@ MMVIZ_BRAND_FONT_SERIF = ["Times", "Times New Roman", "serif"]
 MMVIZ_BRAND_FONT_SANS_SERIF = ["Univers 47 Condensed Light", "Univers 57 Condensed",
                                "Arial Narrow", "Arial", "sans-serif"]
 
-MMVIZ_COLOR_PALETTE_QUAL_1 = ["#7570b3", "#d95f02", "#1b9e77", "#a6761d", "#e6ab02", "#666666", "#e7298a", "#66a61e"]
-MMVIZ_COLOR_PALETTE_QUAL_2 = ["#8da0cb", "#fc8d62", "#66c2a5", "#e5c494", "#ffd92f", "#b3b3b3", "#e78ac3", "#a6d854"]
-MMVIZ_COLOR_PALETTE_QUAL_3 = MMVIZ_COLOR_PALETTE_QUAL_1 + MMVIZ_COLOR_PALETTE_QUAL_2
+MMVIZ_COLOR_PALETTE_QUAL_DARK = ["#7570b3", "#d95f02", "#1b9e77", "#a6761d", "#e6ab02", "#666666", "#e7298a", "#66a61e"]
+MMVIZ_COLOR_PALETTE_QUAL_LIGHT = ["#8da0cb", "#fc8d62", "#66c2a5", "#e5c494", "#ffd92f", "#b3b3b3", "#e78ac3", "#a6d854"]
+MMVIZ_COLOR_PALETTE_QUAL_ALT_DARK = MMVIZ_COLOR_PALETTE_QUAL_DARK + MMVIZ_COLOR_PALETTE_QUAL_LIGHT
+MMVIZ_COLOR_PALETTE_QUAL_ALT_LIGHT = MMVIZ_COLOR_PALETTE_QUAL_LIGHT + MMVIZ_COLOR_PALETTE_QUAL_DARK
 
 MMVIZ_COLOR_PALETTE_SEQ  = ["#fff7fb", "#ece7f2", "#d0d1e6", "#a6bddb", "#74a9cf",
                            "#3690c0", "#0570b0", "#045a8d", "#023858"]
@@ -68,13 +69,16 @@ def scale_palette_mm(type = "qual"):
 def get_palette(type = "qual"):
 
     if type == "qual_color" or type == "qual_dark":
-        return MMVIZ_COLOR_PALETTE_QUAL_1
+        return MMVIZ_COLOR_PALETTE_QUAL_DARK
 
     if type == "qual" or type == "qual_fill" or type == "qual_light":
-        return MMVIZ_COLOR_PALETTE_QUAL_2
+        return MMVIZ_COLOR_PALETTE_QUAL_LIGHT
 
-    if type == "qual_all":
-        return MMVIZ_COLOR_PALETTE_QUAL_3
+    if type == "qual_alt_dark":
+        return MMVIZ_COLOR_PALETTE_QUAL_ALT_DARK
+
+    if type == "qual_alt" or type == "qual_alt_light":
+        return MMVIZ_COLOR_PALETTE_QUAL_ALT_LIGHT
 
     if type == "seq":
         return MMVIZ_COLOR_PALETTE_SEQ
