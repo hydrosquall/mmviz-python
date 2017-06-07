@@ -13,8 +13,8 @@ patch.edgecolor : ffffff
 
 ### FONT
 font.family : sans-serif
-font.serif : Times, Times New Roman, serif
-font.sans-serif : Univers 47 Condensed Light, Univers 57 Condensed, Arial Narrow, Arial, sans-serif
+font.serif : FreightText, Georgia, Times New Roman, Times, serif
+font.sans-serif : BrandonText, Helvetica, Arial, sans-serif
 
 
 ### AXES
