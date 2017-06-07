@@ -4,16 +4,11 @@ import matplotlib.pyplot as plt
 from cycler import cycler
 from matplotlib.font_manager import FontProperties
 
-#MMVIZ_BRAND_FONT_SERIF = ["Times", "Times New Roman", "serif"]
 MMVIZ_BRAND_FONT_SERIF = ["FreightText", "Georgia", "Times New Roman", "Times", "serif"]
-#MMVIZ_BRAND_FONT_SANS_SERIF = ["Univers 47 Condensed Light", "Univers 57 Condensed",
-#                               "Arial Narrow", "Arial", "sans-serif"]
 MMVIZ_BRAND_FONT_SANS_SERIF = ["BrandonText", "Helvetica", "Arial", "sans-serif"]
 
-#MMVIZ_COLOR_PALETTE_QUAL_DARK = ["#7570b3", "#d95f02", "#1b9e77", "#a6761d", "#e6ab02", "#666666", "#e7298a", "#66a61e"]
 MMVIZ_COLOR_PALETTE_QUAL_DARK = ["#232E53", "#DF6035", "#42A44C", "#EFB83B", "#855AA1", "#69A5AC", "#D7313E", "#318FBF"]
 
-#MMVIZ_COLOR_PALETTE_QUAL_LIGHT = ["#8da0cb", "#fc8d62", "#66c2a5", "#e5c494", "#ffd92f", "#b3b3b3", "#e78ac3", "#a6d854"]
 MMVIZ_COLOR_PALETTE_QUAL_LIGHT = ["#5F6781", "#E78B6C", "#75BC7C", "#F3CB70", "#A687BA", "#94BFC2", "#E16972", "#69ADD0"]
 
 MMVIZ_COLOR_PALETTE_QUAL_ALT_DARK = MMVIZ_COLOR_PALETTE_QUAL_DARK + MMVIZ_COLOR_PALETTE_QUAL_LIGHT
