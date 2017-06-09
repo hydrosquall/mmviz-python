@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from cycler import cycler
 from matplotlib.font_manager import FontProperties
 
-MMVIZ_BRAND_FONT_SERIF = ["FreightText", "Georgia", "Times New Roman", "Times", "serif"]
-MMVIZ_BRAND_FONT_SANS_SERIF = ["BrandonText", "Helvetica", "Arial", "sans-serif"]
+MMVIZ_BRAND_FONT_SERIF = ["Georgia", "Times New Roman", "Times", "serif"]
+MMVIZ_BRAND_FONT_SANS_SERIF = ["Helvetica", "Arial", "sans-serif"]
 
 MMVIZ_COLOR_PALETTE_QUAL_DARK = ["#232E53", "#DF6035", "#42A44C", "#EFB83B", "#855AA1", "#69A5AC", "#D7313E", "#318FBF"]
 
@@ -29,7 +29,7 @@ MMVIZ_COLOR_BLUE_DARK = "#5C6B7E"
 
 
 TITLE_FONT_PROPERTIES = FontProperties()
-TITLE_FONT_PROPERTIES.set_family(MMVIZ_BRAND_FONT_SERIF)
+TITLE_FONT_PROPERTIES.set_family(MMVIZ_BRAND_FONT_SERIF[0])
 TITLE_FONT_PROPERTIES.set_size("xx-large")
 
 # create bin list based on values list and bin_width
