@@ -31,6 +31,10 @@ plt.show()
 
 ```
 
+The resulting chart will look like this: 
+
+![diamonds_example_screenshot](./screenshots/diamonds_by_clarity.png)
+
 # Available Functions
 
 ## [mmviz.py]
